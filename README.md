@@ -1,24 +1,40 @@
-# README
+# Simonslist
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Craigslist Clone built with RoR and PostgreSQL**
 
-Things you may want to cover:
+---
 
-* Ruby version
+HI THERE! YEAH, YOU!
 
-* System dependencies
+STOP SNOOPING AROUND MY REPOS!
 
-* Configuration
+<img src="https://media.giphy.com/media/8Pm9JnGBgQoSKtXPPW/giphy.gif" width=100%>
 
-* Database creation
+---
 
-* Database initialization
+**Ruby Version**
 
-* How to run the test suite
+```
+Ruby 2.7.1p83
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+**Rails Version**
+```
+Rails 6.0.2.2
+```
 
-* Deployment instructions
+**System dependencies**
 
-* ...
+**Configuration**
+
+**Database Creation**
+
+**Database Initialization**
+
+**Testing**
+
+**Services (job queues, cache servers, search engines, etc.)**
+
+**Deploy**
+
+---
