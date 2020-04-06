@@ -1,3 +1,22 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.category-box {
+  width: 33.3%;
+  float: left;
+}
+
+.category-post {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fefefe;
+}
+
+.post-date {
+  color: #999;
+}
+
+.post-title {
+  
+}

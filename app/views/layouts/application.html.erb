@@ -10,6 +10,35 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="header">
+      <%= render "layouts/breadcrumb_nav" %>
+    </div>
+    <p class="notice"><%= notice %></p>
+    <div class="main">
+      <div class="main-left">
+        <strong><p class="title"> <%= link_to  "Simonslist", root_path %> </p></strong>
+
+        <%= link_to 'create new post', new_post_path %><br />
+        
+        <%# <%= link_to 'sign out', destroy_account_session_path if account_signed_in? %>
+
+        <%= render "categories/category_sidebar" if controller.controller_name == "categories" %>
+
+        <%= link_to  "my account", new_account_session_path unless account_signed_in? %>
+        
+        <% if is_home? %>
+          <div class="nav-pages">
+            <p><%= link_to  "faq", faqs_path %></p>
+      
+            <p><%= link_to  "personal safety", safety_path %></p>
+
+            <p><%= link_to  "terms and conditions", terms_path %></p>
+          </div>
+        <% end %>
+      </div>
+      <div class="main-right">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
