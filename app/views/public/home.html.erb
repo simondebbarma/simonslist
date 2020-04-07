@@ -1,10 +1,12 @@
-<% @categories.each do |category| %>
-  <div class="category-box">
-  
-    <p><strong><%= link_to category.name, category_path(category) %></strong></p>
+<div class=card-columns>
+  <% @categories.each do |category| %>
+    <div class="card mb-4">
+    
+      <p><strong><%= link_to category.name, category_path(category), class: "text-dark"%></strong></p>
 
-    <% category.subcategories.limit(10).each do |subcategory| %>
-      <div class="subcat"><%= link_to subcategory.name, category_path(subcategory) %></div>
-    <% end %>
-  </div>
-<% end %>
+      <% category.subcategories.each do |subcategory| %>
+        <div class="subcat"><%= link_to subcategory.name, category_path(subcategory) %></div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
