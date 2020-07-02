@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Simonslist</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application' %>
-  </head>
+<head>
+  <title>Simonslist</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <header class="header">
-      <%= render "layouts/breadcrumb_nav" %>
-    </header>
-    <p class="notice"><%= notice %></p>
-    <div class="container main">
-      <div class="row">
-        <div class="col-3">
-          <strong><p class="title"> <%= link_to  "Simonslist", root_path %> </p></strong>
+  <%= stylesheet_pack_tag 'application', media: 'all' %>
+  <%= javascript_pack_tag 'application' %>
+</head>
 
-          <%= link_to 'create new post', new_post_path %><br />
-          
-          <%= render "categories/category_sidebar" if controller.controller_name == "categories" %>
+<body>
+  <header class="header">
+    <%= render "layouts/breadcrumb_nav" %>
+  </header>
+  <p class="notice"><%= notice %></p>
+  <div class="container main">
+    <div class="row">
+      <div class="col-3">
+        <strong>
+          <p class="title"> <%= link_to  "Simonslist", root_path %> </p>
+        </strong>
 
-          <%= link_to  "sign in", new_account_session_path unless account_signed_in? %>
-          
-          <% if is_home? %>
-            <div class="nav-pages">
-              <p><%= link_to  "faq", faqs_path %></p>
-        
-              <p><%= link_to  "personal safety", safety_path %></p>
+        <%= link_to 'create new post', new_post_path %><br />
 
-              <p><%= link_to  "terms and conditions", terms_path %></p>
-            </div>
-          <% end %>
+        <%= render "categories/category_sidebar" if controller.controller_name == "categories" %>
+
+        <%= link_to  "sign in", new_account_session_path unless account_signed_in? %>
+
+        <% if is_home? %>
+        <div class="nav-pages">
+          <p><%= link_to  "faq", faqs_path %></p>
+
+          <p><%= link_to  "personal safety", safety_path %></p>
+
+          <p><%= link_to  "terms and conditions", terms_path %></p>
         </div>
-        <div class="col-9">
-          <%= yield %>
-        </div>
+        <% end %>
+      </div>
+      <div class="col-9">
+        <%= yield %>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
